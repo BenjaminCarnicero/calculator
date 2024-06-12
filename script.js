@@ -35,3 +35,24 @@ function calculate() {
     }
 }
 
+// Función para manejar los eventos de los botones
+function handleButtonClick(event) {
+    const value = event.target.dataset.value;
+    if (value !== undefined) {
+        appendToDisplay(value);
+    } else if (event.target.id === 'clear') {
+        clearDisplay();
+    } else if (event.target.id === 'backspace') {
+        backspace();
+    } else if (event.target.id === 'equals') {
+        calculate();
+    }
+}
+
+// Añadimos el event listener a los botones después de que el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', handleButtonClick);
+    });
+});
