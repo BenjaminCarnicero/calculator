@@ -1,0 +1,81 @@
+/* Aplicamos un fondo azul claro al cuerpo del documento */
+body {
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.tittle {
+    text-align: center;
+    border: 1px solid;
+}
+
+/* Estilizamos el contenedor principal de la calculadora */
+.calculator {
+    background-color: #0288d1;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 400px; /* Aumentamos el ancho */
+}
+
+/* Estilizamos la pantalla de la calculadora */
+.display {
+    background-color: #01579b;
+    padding: 30px; /* Aumentamos el padding */
+    text-align: right;
+}
+
+/* Estilizamos el input de la pantalla */
+.display input {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 2.5em; /* Aumentamos el tamaño de la fuente */
+    width: 100%;
+    text-align: right;
+}
+
+/* Estilizamos los botones de la calculadora */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px; /* Aumentamos el gap */
+    padding: 30px; /* Aumentamos el padding */
+}
+
+/* Estilos comunes para todos los botones */
+.btn {
+    background-color: #03a9f4;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 2em; /* Aumentamos el tamaño de la fuente */
+    padding: 25px; /* Aumentamos el padding */
+    cursor: pointer;
+}
+
+/* Estilo para los botones de operadores */
+.operator {
+    background-color: #0288d1;
+}
+
+/* Estilo para el botón de igual */
+.equals {
+    grid-column: span 3; /* Ocupa 3 columnas para dejar espacio al botón de backspace */
+    background-color: #01579b;
+}
+
+/* Estilo para el botón de backspace */
+.backspace {
+    background-color: #0288d1;
+}
+
+/* Efecto de hover para los botones */
+.btn:hover {
+    background-color: #0277bd;
+}
